@@ -1,15 +1,27 @@
--- Create a new table
+------------------------------- Calculating Product Average --------------------------
 
-create table transactions;
+-- 1.  Creating "transactions" table;
 
+create table transactions
+(
+   id int,
+   user_id int,
+   created_at DateTimeoffset,
+   product_id int,
+   quantity int
+);
 
--- delete a table
+-- 2. Create "products" table
 
-drop table transactions;
+create table products
+(
+    id int,
+    name varchar(30),
+    price float
+);
 
+-- 3. Insert data into table
 
--- Inserting data into a table;
-
-
-
-
+INSERT INTO transactions (id, user_id, created_at, product_id, quantity)
+VALUES ('103', 1203,2021-09-01,1,4);
+        
