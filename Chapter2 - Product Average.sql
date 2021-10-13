@@ -1,6 +1,10 @@
 ------------------------------- Calculating Product Average
 
---- Loading the data
+------- Given a table of transactions and products, write a query to return the product id, product price, 
+------- and average transaction price of all products with price greater than the average transaction price.
+
+------------------------------------------------------------------------------------------------------------------------------------------
+-                                                            Loading the data
 ------------------------------------------------------------------------------------------------------------------------------------------
 -- 1.  Creating "transactions" table;
 
@@ -34,7 +38,9 @@ INSERT INTO products (id, name, price)
 VALUES (1203, 'Apple', 40.5), (1204, 'Orange',8), (1205, 'Banana', 2.5), (1206,'Custard Apple', 37);
 
 ------------------------------------------------------------------------------------------------------------------------------------------
---- SQL Query to calculate the Average transactional value of the product
+-                                      SQL Query to calculate the Average transactional value of the product
+------------------------------------------------------------------------------------------------------------------------------------------
+
 
 
 
