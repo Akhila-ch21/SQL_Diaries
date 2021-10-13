@@ -5,7 +5,7 @@
 create table transactions
 (
    id int,
-   user_id int,
+   user_id varchar(30),
    created_at DateTimeoffset,
    product_id int,
    quantity int
