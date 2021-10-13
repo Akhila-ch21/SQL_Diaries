@@ -1,14 +1,16 @@
--- Create a new table
+#### Chapter1 : Basic SQL Queries 
+
+-- 1. Create a new table
 
 create table transactions;
 
 
--- delete a table
+-- 2. Delete a table
 
 drop table transactions;
 
 
--- Inserting data into a table;
+-- 3. Inserting data into a table;
 
 
 
