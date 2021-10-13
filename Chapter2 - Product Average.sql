@@ -20,7 +20,7 @@ create table transactions
 -- 2. Insert data into "transactions" table
 
 INSERT INTO transactions (id, user_id, created_at, product_id, quantity)
-VALUES (103, 1203,'2021-09-01',1,4), (104, 1203,'2021-09-02',2,8), (105, 1204, '2021-09-01', 1, 5), (106, 1204, '2021-09-02', 3, 7);
+VALUES (103, 1,'2021-09-01',1203,4), (104, 2,'2021-09-02',1203,8), (105, 2, '2021-09-01', 1204, 5), (106, 3, '2021-09-02', 1204, 7);
 
 
 -- 3. Create "products" table
@@ -40,6 +40,11 @@ VALUES (1203, 'Apple', 40.5), (1204, 'Orange',8), (1205, 'Banana', 2.5), (1206,'
 ------------------------------------------------------------------------------------------------------------------------------------------
 -                                      SQL Query to calculate the Average transactional value of the product
 ------------------------------------------------------------------------------------------------------------------------------------------
-
-
+select product_id, price, avg_price from 
+(select product_id, price, avg(qty * price) as avg_price from
+((select product_id, quantity as qty from transactions group by product_id)
+left join (select id as product_id , price from products) 
+using(product_id)) 
+group by product_id, price)
+where price > avg_price
 
