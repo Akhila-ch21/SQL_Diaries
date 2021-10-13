@@ -2,8 +2,14 @@
 
 -- 1. Create a new table
 
-create table transactions;
-
+create table transactions
+(
+   id int,
+   user_id int,
+   created_at DateTimeoffset,
+   product_id int,
+   quantity int
+);
 
 -- 2. Delete a table
 
