@@ -1,6 +1,12 @@
-------------------------------- 
+------------------------------- Top 5 Apple Actions
 
-------- 
+------- The events table tracks every time a user performs a certain action (like, post_enter, etc.) on a platform (android, web, etc.).
+
+------- Write a query to determine the top 5 actions performed during the month of November 2020, for actions performed on an Apple platform (iphone, ipad).
+
+------- The output should include the action performed and their rank in ascending order. If two actions performed equally, they should have the same rank. 
+
+
 
 ------------------------------------------------------------------------------------------------------------------------------------------
 -                                                            Loading the data
