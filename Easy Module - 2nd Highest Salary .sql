@@ -28,7 +28,7 @@ VALUES (103, 'Akhila','A',1203,4), (104, 'Aneela','B',1204,8), (105, 'Hyma', 'C'
 create table departments
 (
    id int,
-   name varchar(20),
+   name varchar(20)
 );
 
 -- 4. Insert data into "departments" table
@@ -42,9 +42,30 @@ VALUES (4,'engineering'), (4,'engineering'), (4,'engineering'), (7,'Physics');
 TRICK! : whenever occurences comes use "ROW_NUMBER()" function
 ------------------------------------------------------------------------------------------------------------------------------------------
 Actual solution:
+------------------
 
 
+with ranking as 
+(
+select salary, department_id, row_number() over (partition by department_id order by salary desc) as salary_rank from employees
+)
 
+select salary
+from ranking as r
+inner join departments as d
+on r.department_id = d.id
+where name ='engineering'
+and salary_rank =2
+
+------------------
+Method2: (same logic)
+------------------
+
+select salary from (
+(select *, row_number() over (partition by department_id order by salary desc) as ranking from employees) as e
+inner join (select * from departments where name ='engineering') as d
+on e.department_id = d.id ) 
+where ranking = 2
 
 
 
