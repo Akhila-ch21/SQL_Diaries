@@ -24,17 +24,15 @@ create table students
 -- 2. Insert data into "students" table
 
 INSERT INTO students (id, name, marks)
-VALUES (103, 1,'2021-09-01',1203,4), (104, 2,'2021-09-02',1203,8), (105, 2, '2021-09-01', 1204, 5), (106, 3, '2021-09-02', 1204, 7);
+VALUES (1, 'Julia',88), (2,'samantha', 68),(3,'Maria', 99 ),(4,'Scarlet',78), (5, 'Ashley', 63), (6,'Jane', 81);
 
--- 3.  Creating "transactions" table;
+-- 3.  Creating "grades" table;
 
-create table transactions
+create table grades
 (
-   id int,
-   user_id int,
-   created_at Date,
-   product_id int,
-   quantity int
+   grade int,
+   Min_mark int,
+   max_mark int
 );
 
 -- 4. Insert data into "transactions" table
