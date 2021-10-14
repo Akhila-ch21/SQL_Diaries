@@ -7,14 +7,14 @@
 -- 2. Let's say our example output from the above query is:
 
 -- Men
-- AOV: $46.3
-- Total purchases: 2500
-- Unique purchasers: 1500
+-- AOV: $46.3
+-- Total purchases: 2500
+-- Unique purchasers: 1500
 
 -- Women
-- AOV: $50.2
-- Total purchases: 3500
-- Unique purchasers: 500
+-- AOV: $50.2
+-- Total purchases: 3500
+-- Unique purchasers: 500
 
 -- Would the difference in AOV (average order value) be significant?
 
