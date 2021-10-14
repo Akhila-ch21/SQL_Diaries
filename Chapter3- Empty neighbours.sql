@@ -3,7 +3,6 @@
 ------- We're given two tables, a users table with demographic information and the neighborhood they live in and a neighborhoods table.
 ------ Write a query that returns all of the neighborhoods that have 0 users.
 
--- Trick : Whenever the question asks about finding values with "0" something (users, employees, posts, etc..) immediately think of the concept of "LEFT JOIN" !
 ------------------------------------------------------------------------------------------------------------------------------------------
 -                                                            Loading the data
 ------------------------------------------------------------------------------------------------------------------------------------------
@@ -40,6 +39,7 @@ VALUES (1203, 'Akhila', 40.5), (1204, 'Aneela',8), (1205, 'Hyma', 2.5), (1206,'V
 
 ------------------------------------------------------------------------------------------------------------------------------------------
 -              QUERY TO IDENTIFY THE EMPTY NEIGHBOURS
+- TRICK: Whenever the question asks about finding values with "0" something (users, employees, posts, etc..) immediately think of the concept of "LEFT JOIN" !
 ------------------------------------------------------------------------------------------------------------------------------------------
-
+ 
 
