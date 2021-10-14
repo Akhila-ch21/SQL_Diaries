@@ -38,7 +38,8 @@ INSERT INTO neighborhoods (id, name, city_id)
 VALUES (1203, 'Akhila', 40.5), (1204, 'Aneela',8), (1205, 'Hyma', 2.5), (1206,'Venu', 37);
 
 ------------------------------------------------------------------------------------------------------------------------------------------
--              QUERY TO IDENTIFY THE EMPTY NEIGHBOURS
+-                                            QUERY TO IDENTIFY THE EMPTY NEIGHBOURS
+
 - TRICK: Whenever the question asks about finding values with "0" something (users, employees, posts, etc..) immediately think of the concept of "LEFT JOIN" !
 ------------------------------------------------------------------------------------------------------------------------------------------
  
