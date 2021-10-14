@@ -59,3 +59,9 @@ select distinct(CITY) from STATION where lower(CITY) REGEXP '[aeiou]$' ; -- "^" 
 select distinct(CITY) from STATION where lower(CITY) like '%a' or lower(city) like '%e' or lower(city) like '%i' or lower(city) like '%o' or lower(city) like '%u'
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+--7 Query the list of CITY names from STATION which have vowels (i.e., a, e, i, o, and u) as both their first and last characters. Your result cannot contain duplicates.
+
+select  distinct city from station where lower(city) REGEXP '^[aeiou]' and lower(city) REGEXP '[aeiou]$'
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
