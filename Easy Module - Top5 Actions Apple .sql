@@ -36,6 +36,14 @@ TRICK! : whenever occurences comes use "ROW_NUMBER()" function
 Actual solution:
 
 
+select df.action, row_number() over (partition by df.user_id order by df.created_at asc) as ranks
+ from 
+(
+select * from events
+where platform ='Apple'
+and date(created_at) between '2020-11-01' and '2020-11-30'
+) as df
+limit 5
 
 
 
