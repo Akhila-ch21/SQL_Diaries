@@ -65,3 +65,10 @@ select distinct(CITY) from STATION where lower(CITY) like '%a' or lower(city) li
 select  distinct city from station where lower(city) REGEXP '^[aeiou]' and lower(city) REGEXP '[aeiou]$'
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+--8 Query the list of CITY names from STATION that do not end with vowels. Your result cannot contain duplicates.
+
+select distinct city from station where lower(substr(city, length(city), length(city))) not in ('a','e','i','o','u')
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
