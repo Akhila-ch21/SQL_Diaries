@@ -11,20 +11,19 @@
 -                                                            Loading the data
 ------------------------------------------------------------------------------------------------------------------------------------------
 
--- 1.  Creating "transactions" table;
+-- 1.  Creating "students" table;
 
-create table transactions
+create table students
+
 (
    id int,
-   user_id int,
-   created_at Date,
-   product_id int,
-   quantity int
+   name varchar(20),
+   Marks int
 );
 
--- 2. Insert data into "transactions" table
+-- 2. Insert data into "students" table
 
-INSERT INTO transactions (id, user_id, created_at, product_id, quantity)
+INSERT INTO students (id, name, marks)
 VALUES (103, 1,'2021-09-01',1203,4), (104, 2,'2021-09-02',1203,8), (105, 2, '2021-09-01', 1204, 5), (106, 3, '2021-09-02', 1204, 7);
 
 -- 3.  Creating "transactions" table;
