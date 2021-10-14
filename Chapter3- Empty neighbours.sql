@@ -42,5 +42,15 @@ VALUES (1, 'Akhila', 40.5), (8, 'Aneela',8), (5, 'Hyma', 2.5), (6,'Venu', 37);
 
 - TRICK: Whenever the question asks about finding values with "0" something (users, employees, posts, etc..) immediately think of the concept of "LEFT JOIN" !
 ------------------------------------------------------------------------------------------------------------------------------------------
- 
+-- Best Method:
 
+select n.name as neighborhood_name from neighborhoods as n 
+left join users as u 
+on n.id = u.neighborhood_id
+where u.id is null
+
+------------------------------------------------------------------------------------------------------------------------------------------
+-- Method : 2 (Not effecient)
+------------------------------------------------------------------------------------------------------------------------------------------
+select n.name as neighborhood_name from neighborhoods as n 
+where n.id not in (select distinct u.neighborhood_id as id from users as u )
