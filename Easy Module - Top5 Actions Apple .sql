@@ -24,7 +24,7 @@ create table events
 
 -- 2. Insert data into "events" table
 
-INSERT INTO transactions (user_id, created_at, action, platform)
+INSERT INTO events (user_id, created_at, action, platform)
 VALUES (101,'2020-11-01',"action1",'Apple'), ( 102,'2020-11-02',"action2","Apple"), (103, '2020-11-04', "action3", "Apple"), (104, '2020-12-25', "action4", "Android");
 
 
