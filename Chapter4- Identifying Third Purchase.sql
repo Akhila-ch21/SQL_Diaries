@@ -28,6 +28,20 @@ TRICK! : whenever occurences comes use "ROW_NUMBER()" function
 Actual solution:
 
 
+WITH Occurences AS 
+(
+    SELECT 
+        *,
+        ROW_NUMBER () OVER (PARTITION BY user_id order by created_at  asc ) AS "Occurence"            
+    FROM transactions
+)
+SELECT 
+    user_id,
+    created_at,
+    product_id,
+    quantity
+FROM Occurences 
+WHERE Occurence = 3
 
 ------------------------------------------------------------------------------------------------------------------------------------------
 -                                      SQL Query to Identify the First Purchase 
