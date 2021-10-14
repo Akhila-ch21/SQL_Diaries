@@ -34,4 +34,10 @@ select * from transactions
 select * from transactions limit n-1, 1
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
---6. 
+--6. Query the list of CITY names starting with vowels (i.e., a, e, i, o, or u) from STATION. Your result cannot contain duplicates.
+
+select distinct city from station where LOWER(SUBSTR(city,1,1)) in ('a','e','i','o','u')
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
