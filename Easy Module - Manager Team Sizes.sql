@@ -21,7 +21,7 @@ create table employees
 -- 2. Insert data into "employees" table
 
 INSERT INTO employees (id, first_name, last_name, salary, department_id, manager_id)
-VALUES (103, 'Akhila','A',1203,4, 3), (104,'Aneela','CH', 1204,8, 3), (105, 2, '2021-09-01', 1204, 8), (106, 3, '2021-09-02', 1204, 7);
+VALUES (103, 'Akhila','A',1203,4, 3), (104,'Aneela','CH', 1204,8, 3), (105, 'Hyma', 'CH', 1204, 3,8), (106, 'Venu', 'CH', 1204, 3, 7);
 
 -- 3.  Creating "managers" table;
 
