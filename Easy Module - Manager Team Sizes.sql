@@ -14,15 +14,14 @@ create table employees
    first_name varchar(30),
    last_name varchar(30),
    salary int,
-   created_at Date,
    department_id int,
    manager_id int
 );
 
 -- 2. Insert data into "employees" table
 
-INSERT INTO employees (id, first_name, last_name,salary, created_at,product_id, department_id, manager_id)
-VALUES (103, 1,'2021-09-01',1203,4), (104, 2,'2021-09-02',1203,8), (105, 2, '2021-09-01', 1204, 5), (106, 3, '2021-09-02', 1204, 7);
+INSERT INTO employees (id, first_name, last_name, salary, department_id, manager_id)
+VALUES (103, 'Akhila','A',1203,4, 3), (104,'Aneela','CH', 1204,8, 3), (105, 2, '2021-09-01', 1204, 8), (106, 3, '2021-09-02', 1204, 7);
 
 -- 3.  Creating "managers" table;
 
@@ -36,7 +35,7 @@ create table managers
 -- 4. Insert data into "managers" table
 
 INSERT INTO managers (id, name, team)
-VALUES (103, 1,'2021-09-01',1203,4), (104, 2,'2021-09-02',1203,8), (105, 2, '2021-09-01', 1204, 5), (106, 3, '2021-09-02', 1204, 7);
+VALUES (3,'AA','Wrestlers'), (8,'CC','SEASOIUN'), (7,'BB','FreWENC');
 
 ------------------------------------------------------------------------------------------------------------------------------------------
 -                                      SQL Query to 
