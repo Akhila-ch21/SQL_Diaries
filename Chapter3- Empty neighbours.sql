@@ -1,15 +1,7 @@
--- Create a new table
+------------------------------- Identifying Empty Neighbours
 
-create table transactions;
-
-
--- delete a table
-
-drop table transactions;
-
-
--- Inserting data into a table;
-
-
-
-
+------- We're given two tables, a users table with demographic information and the neighborhood they live in and a neighborhoods table.
+------ Write a query that returns all of the neighborhoods that have 0 users.
+------------------------------------------------------------------------------------------------------------------------------------------
+-                                                            Loading the data
+------------------------------------------------------------------------------------------------------------------------------------------
