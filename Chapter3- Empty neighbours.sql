@@ -30,11 +30,16 @@ create table neighborhoods
 (
     id int,
     name varchar(30),
-    price float
+    city_id int
 );
 
 --4. Insert data into "neighborhoods" table
 
-INSERT INTO neighborhoods (id, name, price)
-VALUES (1203, 'Apple', 40.5), (1204, 'Orange',8), (1205, 'Banana', 2.5), (1206,'Custard Apple', 37);
+INSERT INTO neighborhoods (id, name, city_id)
+VALUES (1203, 'Akhila', 40.5), (1204, 'Aneela',8), (1205, 'Hyma', 2.5), (1206,'Venu', 37);
+
+------------------------------------------------------------------------------------------------------------------------------------------
+-              QUERY TO IDENTIFY THE EMPTY NEIGHBOURS
+------------------------------------------------------------------------------------------------------------------------------------------
+
 
