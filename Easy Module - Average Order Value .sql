@@ -42,19 +42,17 @@ VALUES (103, 1,'2021-09-01',1203,4), (104, 2,'2021-09-02',1203,8), (105, 2, '202
 
 -- 3.  Creating "transactions" table;
 
-create table transactions
+create table users
 (
    id int,
-   user_id int,
-   created_at Date,
-   product_id int,
-   quantity int
-);
+   name varchar(30),
+   sex varchar(30)
+   );
 
--- 4. Insert data into "transactions" table
+-- 4. Insert data into "users" table
 
-INSERT INTO transactions (id, user_id, created_at, product_id, quantity)
-VALUES (103, 1,'2021-09-01',1203,4), (104, 2,'2021-09-02',1203,8), (105, 2, '2021-09-01', 1204, 5), (106, 3, '2021-09-02', 1204, 7);
+INSERT INTO users (id, name, sex)
+VALUES (1,'Akhila','F'), (2,'Aneela','F), (3,'Hyma','F'), (4,'Venu','M');
 
 ------------------------------------------------------------------------------------------------------------------------------------------
 -                                      SQL Query to 
