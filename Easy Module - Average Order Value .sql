@@ -73,7 +73,14 @@ VALUES (1,'Akhila','F'), (2,'Aneela','F'), (3,'Hyma','F'), (4,'Venu','M');
 
 TRICK! : whenever occurences comes use "ROW_NUMBER()" function
 ------------------------------------------------------------------------------------------------------------------------------------------
-Actual solution:
+- solution: (not sure!)
+
+select f.sex, avg(f.quantity* f.price) as aov from (
+select user_id, product_id, quantity, sex, price from transactions as t
+inner join products as p on t.product_id = p.id
+inner join users as u on t.user_id = u.id
+) as f
+group by f.sex
 
 
 
