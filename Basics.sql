@@ -80,8 +80,32 @@ select Name from STUDENTS where Marks > 75
 order by RIGHT(Name, 3), ID;   
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-- 10. Given the CITY and COUNTRY tables, query the names of all cities where the CONTINENT is 'Africa'.
 
+create table city
+(
+  id int,
+  name varchar(30),
+  countrycode vachar(20),
+  district varchar(20),
+  population int
+);
 
+create table country
+(
+   code int,
+   name varchar(30),
+   continent varchar(90),
+   region varchar(7),
+   population int
+);
 
+-- solution:
+
+select distinct city.name from city
+join country
+on city.countrycode = country.code
+where continent ='Africa'
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
