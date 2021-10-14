@@ -66,7 +66,7 @@ create table users
 -- 6. Insert data into "users" table
 
 INSERT INTO users (id, name, sex)
-VALUES (1,'Akhila','F'), (2,'Aneela','F), (3,'Hyma','F'), (4,'Venu','M');
+VALUES (1,'Akhila','F'), (2,'Aneela','F'), (3,'Hyma','F'), (4,'Venu','M');
 
 ------------------------------------------------------------------------------------------------------------------------------------------
 -                                      SQL Query to 
