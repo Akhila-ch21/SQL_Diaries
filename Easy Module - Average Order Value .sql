@@ -1,4 +1,4 @@
-------------------------------- Average Order Value
+------------------------------- Average Order Value (AOV)
 
 ------- Given three tables, representing customer transactions and customer attributes:
 
