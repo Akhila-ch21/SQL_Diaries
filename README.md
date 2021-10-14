@@ -1,2 +1,2 @@
 # SQL_Diaries
-# Basic
+# Basic Level
