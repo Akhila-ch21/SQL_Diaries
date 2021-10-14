@@ -44,6 +44,14 @@ TRICK! : whenever occurences comes use "ROW_NUMBER()" function
 ------------------------------------------------------------------------------------------------------------------------------------------
 Actual solution:
 
+select t1.manager, count(distinct(t1.id)) as team_size from (
+select  e.manager_id, m.name as manager, e.id  from employees as e
+join managers as m 
+on e.manager_id = m.id
+) as t1
+group by manager
+order by team_size desc
+limit 1
 
 
 
