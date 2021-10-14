@@ -12,32 +12,29 @@
 create table employees
 (
    id int,
-   user_id int,
-   created_at Date,
-   product_id int,
-   quantity int
+   first_name varchar(20),
+   last_name varchar(50),
+   salary int,
+   department_id int
 );
 
 -- 2. Insert data into "employees" table
 
-INSERT INTO employees (id, user_id, created_at, product_id, quantity)
-VALUES (103, 1,'2021-09-01',1203,4), (104, 2,'2021-09-02',1203,8), (105, 2, '2021-09-01', 1204, 5), (106, 3, '2021-09-02', 1204, 7);
+INSERT INTO employees (id, first_name, last_name, salary, department_id)
+VALUES (103, 'Akhila','A',1203,4), (104, 'Aneela','B',1204,8), (105, 'Hyma', 'C', 1205, 5), (106, 'Venu', 'D', 1206, 7);
 
 -- 3.  Creating "departments" table;
 
 create table departments
 (
    id int,
-   user_id int,
-   created_at Date,
-   product_id int,
-   quantity int
+   name varchar(20),
 );
 
 -- 4. Insert data into "departments" table
 
-INSERT INTO departments (id, user_id, created_at, product_id, quantity)
-VALUES (103, 1,'2021-09-01',1203,4), (104, 2,'2021-09-02',1203,8), (105, 2, '2021-09-01', 1204, 5), (106, 3, '2021-09-02', 1204, 7);
+INSERT INTO departments (id, name)
+VALUES (4,'engineering'), (4,'engineering'), (4,'engineering'), (7,'Physics');
 
 ------------------------------------------------------------------------------------------------------------------------------------------
 -                                      SQL Query to 
