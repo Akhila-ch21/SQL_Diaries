@@ -24,7 +24,21 @@
 -                                                            Loading the data
 ------------------------------------------------------------------------------------------------------------------------------------------
 
--- 1.  Creating "transactions" table;
+-- 1. Creating "Products" table
+                          
+create table products
+(
+   id int,
+   name varchar(30),
+   price float
+   );
+
+-- 2. Insert data into "Products" table
+
+INSERT INTO Products (id, name, price)
+VALUES (1203,'Apple',45), (1203,'Banana',46), (1204,'Orange',50), (1204,'Custard Apple',100);
+
+-- 3.  Creating "transactions" table;
 
 create table transactions
 (
@@ -35,12 +49,12 @@ create table transactions
    quantity int
 );
 
--- 2. Insert data into "transactions" table
+-- 4. Insert data into "transactions" table
 
 INSERT INTO transactions (id, user_id, created_at, product_id, quantity)
 VALUES (103, 1,'2021-09-01',1203,4), (104, 2,'2021-09-02',1203,8), (105, 2, '2021-09-01', 1204, 5), (106, 3, '2021-09-02', 1204, 7);
 
--- 3.  Creating "transactions" table;
+-- 5.  Creating "transactions" table;
 
 create table users
 (
@@ -49,19 +63,7 @@ create table users
    sex varchar(30)
    );
 
--- 4. Insert data into "users" table
-
-INSERT INTO users (id, name, sex)
-VALUES (1,'Akhila','F'), (2,'Aneela','F), (3,'Hyma','F'), (4,'Venu','M');
-
-create table users
-(
-   id int,
-   name varchar(30),
-   sex varchar(30)
-   );
-
--- 4. Insert data into "users" table
+-- 6. Insert data into "users" table
 
 INSERT INTO users (id, name, sex)
 VALUES (1,'Akhila','F'), (2,'Aneela','F), (3,'Hyma','F'), (4,'Venu','M');
