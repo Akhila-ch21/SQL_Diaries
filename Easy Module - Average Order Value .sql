@@ -1,6 +1,24 @@
-------------------------------- 
+------------------------------- Average Order Value
 
-------- 
+------- Given three tables, representing customer transactions and customer attributes:
+
+-- 1. Write a query to get the average order value by gender.
+
+-- 2. Let's say our example output from the above query is:
+
+-- Men
+- AOV: $46.3
+- Total purchases: 2500
+- Unique purchasers: 1500
+
+-- Women
+- AOV: $50.2
+- Total purchases: 3500
+- Unique purchasers: 500
+
+-- Would the difference in AOV (average order value) be significant?
+
+-- Note: remember to round your answer to two decimal places!
 
 ------------------------------------------------------------------------------------------------------------------------------------------
 -                                                            Loading the data
