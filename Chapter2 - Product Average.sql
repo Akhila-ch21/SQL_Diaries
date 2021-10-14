@@ -40,6 +40,31 @@ VALUES (1203, 'Apple', 40.5), (1204, 'Orange',8), (1205, 'Banana', 2.5), (1206,'
 ------------------------------------------------------------------------------------------------------------------------------------------
 -                                      SQL Query to calculate the Average transactional value of the product
 ------------------------------------------------------------------------------------------------------------------------------------------
+Actual solution:
+
+WITH zap AS (
+    SELECT ROUND(AVG(price * quantity), 2) AS avg_price
+    FROM transactions AS t
+    INNER JOIN products AS p
+    	ON t.product_id = p.id
+    
+)
+
+SELECT product_id, product_price, avg_price
+FROM zap
+INNER JOIN (
+    SELECT product_id, ROUND(AVG(price),2) AS product_price
+    FROM transactions as t
+    INNER JOIN products AS p
+        ON t.product_id = p.id
+    GROUP BY 1
+    
+) AS ap
+    ON ap.product_price > zap.avg_price;
+----------------------------------------------------
+--                  Method 2: 
+----------------------------------------------------
+
 select product_id, price, avg_price from 
 (select product_id, price, avg(qty * price) as avg_price from
 ((select product_id, quantity as qty from transactions group by product_id)
