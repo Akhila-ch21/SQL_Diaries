@@ -61,15 +61,4 @@ INNER JOIN (
     
 ) AS ap
     ON ap.product_price > zap.avg_price;
-----------------------------------------------------
---                  Method 2: 
-----------------------------------------------------
-
-select product_id, price, avg_price from 
-(select product_id, price, avg(qty * price) as avg_price from
-((select product_id, quantity as qty from transactions group by product_id)
-left join (select id as product_id , price from products) 
-using(product_id)) 
-group by product_id, price)
-where price > avg_price
 
