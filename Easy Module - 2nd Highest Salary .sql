@@ -1,14 +1,15 @@
-------------------------------- 
+------------------------------- Identifying the 2nd Highest Salary
 
-------- 
+------- Write a SQL query to select the 2nd highest salary in the engineering department. 
+------- If more than one person shares the highest salary, the query should select the next highest salary
 
 ------------------------------------------------------------------------------------------------------------------------------------------
 -                                                            Loading the data
 ------------------------------------------------------------------------------------------------------------------------------------------
 
--- 1.  Creating "transactions" table;
+-- 1.  Creating "employees" table;
 
-create table transactions
+create table employees
 (
    id int,
    user_id int,
@@ -17,14 +18,14 @@ create table transactions
    quantity int
 );
 
--- 2. Insert data into "transactions" table
+-- 2. Insert data into "employees" table
 
-INSERT INTO transactions (id, user_id, created_at, product_id, quantity)
+INSERT INTO employees (id, user_id, created_at, product_id, quantity)
 VALUES (103, 1,'2021-09-01',1203,4), (104, 2,'2021-09-02',1203,8), (105, 2, '2021-09-01', 1204, 5), (106, 3, '2021-09-02', 1204, 7);
 
--- 3.  Creating "transactions" table;
+-- 3.  Creating "departments" table;
 
-create table transactions
+create table departments
 (
    id int,
    user_id int,
@@ -33,9 +34,9 @@ create table transactions
    quantity int
 );
 
--- 4. Insert data into "transactions" table
+-- 4. Insert data into "departments" table
 
-INSERT INTO transactions (id, user_id, created_at, product_id, quantity)
+INSERT INTO departments (id, user_id, created_at, product_id, quantity)
 VALUES (103, 1,'2021-09-01',1203,4), (104, 2,'2021-09-02',1203,8), (105, 2, '2021-09-01', 1204, 5), (106, 3, '2021-09-02', 1204, 7);
 
 ------------------------------------------------------------------------------------------------------------------------------------------
