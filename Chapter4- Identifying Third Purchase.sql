@@ -43,6 +43,13 @@ SELECT
 FROM Occurences 
 WHERE Occurence = 3
 
+
+Another method: same logic
+
+SELECT t.user_id, t.created_at, t.product_id, t.quantity FROM 
+(select *, row_number() over (partition by user_id order by created_at) as row_count from transactions) as t 
+where t.row_count = 3
+
 ------------------------------------------------------------------------------------------------------------------------------------------
 -                                      SQL Query to Identify the First Purchase 
 ------------------------------------------------------------------------------------------------------------------------------------------
