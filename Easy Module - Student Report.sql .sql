@@ -35,19 +35,25 @@ create table grades
    max_mark int
 );
 
--- 4. Insert data into "transactions" table
+-- 4. Insert data into "grades" table
 
-INSERT INTO transactions (id, user_id, created_at, product_id, quantity)
-VALUES (103, 1,'2021-09-01',1203,4), (104, 2,'2021-09-02',1203,8), (105, 2, '2021-09-01', 1204, 5), (106, 3, '2021-09-02', 1204, 7);
+INSERT INTO grades (grade, min_mark, max_mark)
+VALUES (1, 0, 9),(2, 10, 19),(3, 20, 29),(4, 30, 39),(5, 40, 49),(6, 50, 59),(7, 60, 69),(8, 70, 79),(9, 80, 89), (10, 90, 100);
 
 ------------------------------------------------------------------------------------------------------------------------------------------
--                                      SQL Query to 
+-                                      SQL Query to Student Grade Card
 
-TRICK! : whenever occurences comes use "ROW_NUMBER()" function
+--  TRICK! : Apply multiple conditions while joining two tables!
 ------------------------------------------------------------------------------------------------------------------------------------------
 Actual solution:
 
 
+select t1.name_updated, g.grade, t1.marks from 
+(select CASE WHEN S.marks > (select min_mark from grades where grade = 8) THEN S.name ELSE NULL END AS name_updated, S.marks from Students as S) as t1
+inner join 
+(select grade, min_mark, max_mark from grades) as g
+on t1.marks >= g.min_mark and t1.marks <= g.max_mark
+order by g.grade desc, t1.name_updated asc
 
 
 
