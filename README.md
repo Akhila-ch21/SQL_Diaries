@@ -1,7 +1,7 @@
 # SQL_Diaries
-#### Basic Level
+#### Basic Module
 ###### Link: https://www.interviewquery.com/questions?t=sql&l=Easy
-#### Medium Level
+#### Medium Module
 ###### Link: https://www.hackerrank.com/challenges/the-report/problem
 #### Appendix:
 https://8weeksqlchallenge.com/resources/
