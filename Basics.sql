@@ -36,8 +36,26 @@ select * from transactions limit n-1, 1
 
 --6. Query the list of CITY names starting with vowels (i.e., a, e, i, o, or u) from STATION. Your result cannot contain duplicates.
 
+-- Method1: 
 select distinct city from station where LOWER(SUBSTR(city,1,1)) in ('a','e','i','o','u')
+
+-- Method2:
+select distinct(CITY) from STATION where lower(CITY) REGEXP '^[aeiou]' ; -- "^" indicates the first letter of the string in Regular expressions
+
+-- Method3: (ineffecient)
+select distinct(CITY) from STATION where lower(CITY) like 'a%' or lower(city) like 'e%' or lower(city) like 'i%' or lower(city) like 'o%' or lower(city) like 'u%'
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+--6. Query the list of CITY names ending with vowels (i.e., a, e, i, o, or u) from STATION. Your result cannot contain duplicates.
 
+-- Method1: 
+select distinct city from station where LOWER(SUBSTR(city,length(city),length(city))) in ('a','e','i','o','u')
+
+-- Method2:
+select distinct(CITY) from STATION where lower(CITY) REGEXP '[aeiou]$' ; -- "^" indicates the first letter of the string in Regular expressions
+
+-- Method3: (ineffecient)
+select distinct(CITY) from STATION where lower(CITY) like '%a' or lower(city) like '%e' or lower(city) like '%i' or lower(city) like '%o' or lower(city) like '%u'
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
