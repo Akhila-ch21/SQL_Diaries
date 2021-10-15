@@ -151,6 +151,12 @@ Manhattan distance = |x1 - x2|+|y1-y2|
 SELECT ROUND((abs(MIN(LAT_N)-MAX(LAT_N))) + (abs(MIN(LONG_W)-MAX(LONG_W))),4) AS MANHATTAN_DISTANCE FROM STATION
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-- 14. Calculate the Euclidean distance.     # HINT : "SQRT()" function 
 
+/*
+Euclidean Distance = sqrt((x2-x1)^2+(y2-y1)^2)
+*/
 
+select ROUND(SQRT(((MAX(LAT_N)-MIN(LAT_N))*(MAX(LAT_N)-MIN(LAT_N)))+((MAX(LONG_W)-MIN(LONG_W))*(MAX(LONG_W)-MIN(LONG_W)))),4) as ED FROM STATION
 
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
