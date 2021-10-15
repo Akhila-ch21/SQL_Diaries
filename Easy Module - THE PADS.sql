@@ -6,44 +6,31 @@
 -                                                            Loading the data
 ------------------------------------------------------------------------------------------------------------------------------------------
 
--- 1.  Creating "transactions" table;
+-- 1.  Creating "occupations" table;
 
-create table transactions
+create table occupations
 (
-   id int,
-   user_id int,
-   created_at Date,
-   product_id int,
-   quantity int
+   name varchar(20),
+   Occupation varchar(30)
 );
 
--- 2. Insert data into "transactions" table
+-- 2. Insert data into "occupations" table
 
-INSERT INTO transactions (id, user_id, created_at, product_id, quantity)
-VALUES (103, 1,'2021-09-01',1203,4), (104, 2,'2021-09-02',1203,8), (105, 2, '2021-09-01', 1204, 5), (106, 3, '2021-09-02', 1204, 7);
+INSERT INTO occupations (name, Occupation)
+VALUES ('Akhila','Senior Data Analyst'), ('Aneela','Developer'), ('Venu','Engineer'),('Hyma','Home-maker');
 
--- 3.  Creating "transactions" table;
-
-create table transactions
-(
-   id int,
-   user_id int,
-   created_at Date,
-   product_id int,
-   quantity int
-);
-
--- 4. Insert data into "transactions" table
-
-INSERT INTO transactions (id, user_id, created_at, product_id, quantity)
-VALUES (103, 1,'2021-09-01',1203,4), (104, 2,'2021-09-02',1203,8), (105, 2, '2021-09-01', 1204, 5), (106, 3, '2021-09-02', 1204, 7);
 
 ------------------------------------------------------------------------------------------------------------------------------------------
 -                                      SQL Query to 
 
-TRICK! : whenever occurences comes use "ROW_NUMBER()" function
+TRICK! :  "Concat()" function 
 ------------------------------------------------------------------------------------------------------------------------------------------
 Actual solution:
+
+SELECT CONCAT(Name, '(', SUBSTR(Occupation,1,1),')') FROM OCCUPATIONS ORDER BY Name;
+SELECT CONCAT('There are a total of ', COUNT(Occupation), ' ', LOWER(Occupation), 's.') FROM OCCUPATIONS GROUP BY Occupation ORDER BY COUNT(Occupation), Occupation;
+
+
 
 
 
