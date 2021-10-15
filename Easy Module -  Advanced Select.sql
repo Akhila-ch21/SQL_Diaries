@@ -39,10 +39,10 @@ In company C2, the only lead manager is LM2. There is one senior manager, SM3, u
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 select c.company_code, c.founder,
-(select count(*) from lead_manager where company_code = c.company_code),
-(select count(*) from senior_manager where company_code = c.company_code),
-(select count(*) from manager where company_code = c.company_code),
-(select count(*) from employee where company_code = c.company_code)
+(select count(distinct(lead_manager_code)) from lead_manager where company_code = c.company_code),
+(select count(distinct(senior_manager_code)) from senior_manager where company_code = c.company_code),
+(select count(distinct(manager_code)) from manager where company_code = c.company_code),
+(select count(distinct(employee_code)) from employee where company_code = c.company_code)
 from company as c 
 order by c.company_code
 
