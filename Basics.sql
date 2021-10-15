@@ -130,7 +130,16 @@ select ceil(avg(salary) - avg(replace(salary,'0',''))) as difference from employ
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 -- 12. Query the Western Longitude (LONG_W) for the largest Northern Latitude (LAT_N) in STATION that is less than 137.2345. Round your answer to 4 decimal places.
 
+- logic1:
 SELECT ROUND(LONG_W,4) FROM STATION WHERE LAT_N = (SELECT MAX(LAT_N) FROM STATION WHERE LAT_N < 137.2345) 
+
+- logic2:
+SELECT ROUND(LONG_W,4) FROM STATION WHERE LAT_N < 137.2345 ORDER BY LAT_N DESC LIMIT 1
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-- 13. Query the Western Longitude (LONG_W)where the smallest Northern Latitude (LAT_N) in STATION is greater than 38.7780 . Round your answer to 4 decimal places.
+
+select round(long_w,4) from station where lat_n > 38.7780 order by lat_n limit 1
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
