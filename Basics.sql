@@ -160,3 +160,30 @@ Euclidean Distance = sqrt((x2-x1)^2+(y2-y1)^2)
 select ROUND(SQRT(((MAX(LAT_N)-MIN(LAT_N))*(MAX(LAT_N)-MIN(LAT_N)))+((MAX(LONG_W)-MIN(LONG_W))*(MAX(LONG_W)-MIN(LONG_W)))),4) as ED FROM STATION
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-- 15. Calculate the MEDIAN of the column
+
+
+/* MEDIAN:
+
+LOGIC : IN CASE OF BOTH ODD & EVEN :
+        AVG( FLOOR(n/2), ceil(n/2)) ; n is the row position;
+        
+        -----------------------
+        
+Methodology:
+1. Create a rowindex column  with the help of user defined variable, 
+           @rowindex (set @rowindex := -1) # every column starts with 0
+2. arrange them in the ascending or descending order of the column and create row_index
+3. select the records related to ceil(n/2), floor(n/2)
+4. take the avg(column) with row position containing ceil(n/2) and floor(n/2)
+*/
+
+
+SET @rowIndex := -1; -- @row_index - user-defined variable
+SELECT ROUND(AVG(t.LAT_N), 4) FROM
+(
+SELECT @rowIndex := @rowIndex+1 AS rowIndex, s.LAT_N FROM STATION AS s ORDER BY s.LAT_N
+) AS t
+WHERE t.rowIndex IN (FLOOR(@rowIndex / 2), CEIL(@rowIndex / 2));
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
