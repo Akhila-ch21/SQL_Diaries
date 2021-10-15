@@ -1,47 +1,36 @@
-------------------------------- 
+------------------------------- Type of Triangle
 
-------- 
+------- Write a query identifying the type of each record in the TRIANGLES table using its three side lengths. Output one of the following statements for each record in the table:
+
+------- Equilateral: It's a triangle with  sides of equal length.
+------- Isosceles: It's a triangle with  sides of equal length.
+------- Scalene: It's a triangle with  sides of differing lengths.
+------- Not A Triangle: The given values of A, B, and C don't form a triangle.
+
 
 ------------------------------------------------------------------------------------------------------------------------------------------
 -                                                            Loading the data
 ------------------------------------------------------------------------------------------------------------------------------------------
 
--- 1.  Creating "transactions" table;
+-- 1.  Creating "triangles" table;
 
-create table transactions
+create table triangles
 (
-   id int,
-   user_id int,
-   created_at Date,
-   product_id int,
-   quantity int
+   A int,
+   B int,
+   C int
 );
 
--- 2. Insert data into "transactions" table
+-- 2. Insert data into "triangles" table
 
-INSERT INTO transactions (id, user_id, created_at, product_id, quantity)
-VALUES (103, 1,'2021-09-01',1203,4), (104, 2,'2021-09-02',1203,8), (105, 2, '2021-09-01', 1204, 5), (106, 3, '2021-09-02', 1204, 7);
+INSERT INTO triangles (A,B,C)
+VALUES (20,20,23),(20,20,20),(20,21,22),(13,14,30);
 
--- 3.  Creating "transactions" table;
-
-create table transactions
-(
-   id int,
-   user_id int,
-   created_at Date,
-   product_id int,
-   quantity int
-);
-
--- 4. Insert data into "transactions" table
-
-INSERT INTO transactions (id, user_id, created_at, product_id, quantity)
-VALUES (103, 1,'2021-09-01',1203,4), (104, 2,'2021-09-02',1203,8), (105, 2, '2021-09-01', 1204, 5), (106, 3, '2021-09-02', 1204, 7);
 
 ------------------------------------------------------------------------------------------------------------------------------------------
 -                                      SQL Query to Classify the triangles
 
-TRICK! : use "CASE STATEMENTS" for solving Classification problems 
+- TRICK! : use "CASE STATEMENTS" for solving Classification problems 
 ------------------------------------------------------------------------------------------------------------------------------------------
 -- Actual solution:
 
