@@ -142,7 +142,15 @@ SELECT ROUND(LONG_W,4) FROM STATION WHERE LAT_N < 137.2345 ORDER BY LAT_N DESC L
 select round(long_w,4) from station where lat_n > 38.7780 order by lat_n limit 1
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-- 14. Calculate the Manhattan distance.     # HINT : "ABS()" function - modulus
 
+/*
+Manhattan distance = |x1 - x2|+|y1-y2|
+*/
+
+SELECT ROUND((abs(MIN(LAT_N)-MAX(LAT_N))) + (abs(MIN(LONG_W)-MAX(LONG_W))),4) AS MANHATTAN_DISTANCE FROM STATION
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
 
