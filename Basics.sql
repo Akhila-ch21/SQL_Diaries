@@ -110,7 +110,8 @@ where continent ='Africa'
 
 -- 10.1 Given the CITY and COUNTRY tables, query the names of all the continents (COUNTRY.Continent) and their respective average city populations (CITY.Population) rounded down to the nearest integer.
 
--- TRICK! : Round down to nearest integer - "FLOOR()"
+-- TRICK! : Round down to nearest integer - "FLOOR()" ; Round up to nearest integer - "Ceil()"
+
 
 select country.continent, FLOOR(avg(city.population)) as avg from country
 join city
