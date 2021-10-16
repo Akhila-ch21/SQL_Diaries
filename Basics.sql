@@ -187,3 +187,5 @@ SELECT @rowIndex := @rowIndex+1 AS rowIndex, s.LAT_N FROM STATION AS s ORDER BY 
 WHERE t.rowIndex IN (FLOOR(@rowIndex / 2), CEIL(@rowIndex / 2));
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
