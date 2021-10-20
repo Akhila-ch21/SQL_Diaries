@@ -2,10 +2,11 @@
 
 
 1. Basic Aggregations : 
-     - sum(), 
-	  - count(), 
-	  - Avg(),
-	  - count(distinct())
+     - sum()
+     - count() 
+     - Avg()
+     - count(distinct())
+     
 	  
 
 
