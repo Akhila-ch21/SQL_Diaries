@@ -1,7 +1,6 @@
 
-/*
-SQL - Structured Query Laungage
-SQL COMMANDS
+/*.                                                                 SQL - Structured Query Laungage
+SQL COMMANDS:
   - DDL (Data defintion language)
   - DML (Data Manipulation language)
   - DCL (Data control language)
@@ -10,3 +9,5 @@ SQL COMMANDS
   
  Link: https://www.geeksforgeeks.org/sql-ddl-dql-dml-dcl-tcl-commands
  */
+ 
+ -------------------------------------------------------------------------------------------------------------------------------------------------------------------
